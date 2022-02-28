@@ -37,7 +37,7 @@ export function diff(obj: any, newObj: any, _stack: any): any[] {
     }
 
     if (objKey && newObjKey && areObjects && !_stack.includes(objKey)) {
-      const nestedDiffs = diff(objKey, newObjKey, [])
+      const nestedDiffs: any[] = diff(objKey, newObjKey, [])
 
       return diffs.push.apply(
         diffs,
